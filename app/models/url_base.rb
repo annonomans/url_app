@@ -1,0 +1,2 @@
+class UrlBase < ApplicationRecord
+end

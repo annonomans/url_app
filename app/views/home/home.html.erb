@@ -1,0 +1,54 @@
+<style type="text/css">
+
+
+</style>
+
+
+<div class="container-fluid">
+	<div class="row">
+	   <div class="col-md-4 mx-auto">
+	   	   <div class="url-form">
+
+		   		<label>Enter URL</label>
+		   		<input type="text" name="" class="text-input" id="url_input">
+		   	<button type="button" class="btn btn-primary sbm" id="submit-btn">Submit</button>
+		   	</div>
+	   </div>			
+	</div>
+
+	<div class="row">
+		<div class="col-md-4 mx-auto">
+			<div class="">
+				<ol id="url" class="d-none">
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+		var list = $("#url");
+		var input = $("#url_input")
+		reg = /https?:\/\/w{0,3}\w*?\.(\w*?\.)?\w{2,3}\S*|www\.(\w*?\.)?\w*?\.\w{2,3}\S*|(\w*?\.)?\w*?\.\w{2,3}[\/\?]\S*/
+
+		function urlValidater(url) {
+		}
+
+		$("#submit-btn").click(function(){
+			url = input.val()
+			if (reg.test(url)){
+				input.val("");
+				list.removeClass("d-none")
+				list.append("<li>"+url+"</li>");
+			}else{
+				input.val("")
+				alert("false "+url);
+			}
+		});
+
+	});
+
+</script>
