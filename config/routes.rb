@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#home"
+  post "/create_url", to: "home#create_url"
 end
