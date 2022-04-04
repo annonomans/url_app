@@ -13,7 +13,10 @@
 	<div class="row">
 		<div class="col-md-4 mx-auto">
 			<div class="">
-				<ul id="url" class="d-none">
+				<ul id="url" class="">
+					<% @urls.each do |u| %>		
+					<li><%=u.url%></li>
+					<%end%>
 				</ul>
 			</div>
 		</div>

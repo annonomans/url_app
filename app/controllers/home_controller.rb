@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
 	def home
-		
+		@urls = UrlBase.all
 	end
 
 	def create_url
